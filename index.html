@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Nerd Pick 'Em Results.</title>
+  <meta name="description" content="A group of nerd friends try to one-up each other in a weekly college football pick 'em." />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #a3b2d2;
+      font-family: Verdana, "Bitstream Vera Sans", sans-serif;
+      font-size: .9em;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: #0e0d1d;
+    }
+
+    header {
+      background: #1C3852;
+      text-align: center;
+      border-bottom: #0e0d1d 2px solid;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5px;
+    }
+
+    .results p {
+      line-height: 1.5em;
+    }
+
+    .previous,
+    .winner,
+    .current {
+      background-color: #FFF;
+      border: 1px solid #0e0d1d;
+      color: #23272B;
+    }
+
+    .previous {
+      grid-row: 2;
+    }
+
+    .previous h3 {
+      text-decoration: underline;
+    }
+
+    .winner {
+      grid-row: 1;
+      min-height: 370px;
+      background-image: url("images/tada-left.png"), url("images/tada-right.png");
+      background-size: 30%, 30%;
+      background-position: 0 0, 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    .current {
+      grid-row: 1;
+      min-height: 370px;
+      background-image: url("images/trophy.png");
+      background-size: 30%;
+      background-position: 0;
+      background-repeat: no-repeat;
+    }
+
+    .winner h1 {
+      padding: 125px 0 0 0;
+    }
+
+    .current h1 {
+      padding: 125px 0 0 25%;
+      width: 75%;
+    }
+
+    .winner h2 {
+      padding-top: 5px;
+    }
+
+    .current h3 {
+      padding: 0 5px 0 25%;
+      font-weight: normal;
+    }
+
+    @media screen and (min-width: 970px) {
+      .results {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+      }
+
+      .previous {
+        grid-row: 1;
+      }
+
+      .winner, .current {
+        grid-column: 2/4;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header><img src="images/logo.jpg" alt="Nerd Pick 'Em Results" /></header>
+
+  <main>
+    <div class="results">
+      <div class="previous">
+        <h3>Previous Winners</h3>
+        <p>2021-2022<br /><strong>Paul Hummer</strong></p>
+        <p>2020-2021<br /><strong>Deryck Hodge</strong></p>
+        <p>2019-2020<br /><strong>Brandon Freeman</strong></p>
+        <p>2018-2019<br /><strong>Deryck Hodge</strong></p>
+        <p>2017-2018<br /><strong>Donny Ray</strong></p>
+        <p>2016-2017<br /><strong>Jerry Carter</strong></p>
+        <p>2015-2016<br /><strong>Deryck Hodge &amp; Paul Hummer</strong> (tied 1st)</p>
+        <p>2014-2015<br /><strong>Paul Hummer</strong></p>
+        <p>2013-2014<br /><strong>Deryck Hodge</strong></p>
+      </div>
+
+      <!-- Uncomment this to announce the season's winner.
+           Be sure to comment out the "current" div.
+      <div class="winner">
+        <h1>2021-2022 Winner</h1>
+        <h2>Paul Hummer</h2>
+      </div>
+      -->
+
+      <div class="current">
+        <h1>2022-2023 Season</h1>
+        <h3>Who will take home the trophy this season?</h3>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
